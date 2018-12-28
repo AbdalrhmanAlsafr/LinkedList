@@ -42,13 +42,14 @@ namespace ConsoleApp4
                current = current.Link;
                 return current;
             }
+            //Arkadan Ekleme 
             public void Insert(Object newItem, Object after)
                  {
-                Node current = new Node();
-                Node newNode = new Node(newItem);
-                current = Find(after);
-                newNode.Link = current.Link;
-                current.Link = newNode;
+                 Node current = new Node();
+                  Node newNode = new Node(newItem);
+                    current = Header;
+                       newNode.Link = current.Link;
+                       current.Link = newNode;
                   }
            public void PrintList()
             {
@@ -60,7 +61,7 @@ namespace ConsoleApp4
                 MyNode = MyNode.Link;
             }
             }
-       
+       //Ön'den Ekleme 
          public void AddFirst(Object data)
             {
                 Node toAdd = new Node();
