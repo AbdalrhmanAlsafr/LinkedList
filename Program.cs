@@ -52,13 +52,13 @@ namespace ConsoleApp4
                   }
            public void PrintList()
             {
-                Node current = new Node();
-                current = header;
-                while (!(current.Link == null))
-                {
-                    Console.WriteLine(current.Link.Element);
-                    current = current.Link;
-                }
+           Node MyNode = new Node();
+            MyNode = Header;
+            while(MyNode.Link!=null)
+            {
+                Console.WriteLine(MyNode.Data);
+                MyNode = MyNode.Link;
+            }
             }
        
          public void AddFirst(Object data)
