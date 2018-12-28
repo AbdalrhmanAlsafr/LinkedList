@@ -42,14 +42,25 @@ namespace ConsoleApp4
                current = current.Link;
                 return current;
             }
+        public Node SonElEmanBul()
+        {
+            Node Curent = new Node();
+            Curent = header;
+            while(Curent.Link!=null)
+            {
+                Curent = Curent.Link;
+            }
+            return Curent;
+        }
+
             //Arkadan Ekleme 
-            public void Insert(Object newItem, Object after)
+            public void Insert(Object newItem)
                  {
-                 Node current = new Node();
-                  Node newNode = new Node(newItem);
-                    current = Header;
-                       newNode.Link = current.Link;
-                       current.Link = newNode;
+             Node Soneleman = new Node();
+            Soneleman = SonElEmanBul();
+            Node Toadd = new Node();
+            Toadd.Element = newItem;
+            Soneleman.Link = Toadd;
                   }
            public void PrintList()
             {
